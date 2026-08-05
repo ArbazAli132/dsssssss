@@ -6,4 +6,6 @@ public class first {
         int num = scanner.nextInt();
         System.out.println("You entered: " + num);
     }
+    
 }
+
