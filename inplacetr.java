@@ -9,18 +9,15 @@ public class inplacetr {
             System.out.println();
         }
     }
-        static void inplaceTransport(int [] [] arr , int r , int c){
-            for(int i = 0; i < r; i++) {
-        for(int j = i + 1; j < c; j++) {
-
-            // swap
-            int temp = arr[i][j];
-            arr[i][j] = arr[j][i];
-            arr[j][i] = temp;
+        static int[][] transpose(int[][] arr, int r, int c) {
+    int[][] result = new int[c][r];
+    for(int i = 0; i < r; i++) {
+        for(int j = 0; j < c; j++) {
+            result[j][i] = arr[i][j];
         }
     }
-          
-        }
+    return result;
+}
         
     
     public static void main(String[] args) {
@@ -36,7 +33,8 @@ public class inplacetr {
                 arr[i][j]=sc.nextInt();
             }
         }
-        inplaceTransport(arr,r,c);
         print2dArr(arr);
+       int[][] transposed = transpose(arr, r, c);
+print2dArr(transposed);
     }
 }
